@@ -266,19 +266,15 @@ int main(int argc, char **argv)
 		else if(strcmp(line, "ini-8000sv\n") == 0) 
 		{
 			eDebug("Miraclebox Premium Ultra detected");
+		else if(strcmp(line, "bre2zesv\n") == 0) 
+		{
+			eDebug("WWIO Bre2ze detectet ");
+		}
 		}  
 		else
 		{
-			eDebug("Wrong HW, this image can be only run on Miraclbox Premium Series");
+			eDebug("Wrong HW, this image can be only run on Miraclbox Premium and WWIO Series");
 			sprintf(command, "showiframe /usr/share/enigma2/box.mvi > /dev/null");
-			system(command);
-			sprintf(command, "flash_erase /dev/mtd/2 0 0");
-			system(command);
-			sprintf(command, "flash_erase /dev/mtd/4 0 0");
-			system(command);
-			//sprintf(command, "flash_erase /dev/mtd/3 0 0");
-			//system(command);
-			sprintf(command, "sleep 5;reboot -f");
 		}
 		fclose(infile);
 	}
