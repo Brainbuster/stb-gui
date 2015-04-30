@@ -266,11 +266,11 @@ int main(int argc, char **argv)
 		else if(strcmp(line, "ini-8000sv\n") == 0) 
 		{
 			eDebug("Miraclebox Premium Ultra detected");
+		}
 		else if(strcmp(line, "bre2zesv\n") == 0) 
 		{
 			eDebug("WWIO Bre2ze detectet ");
 		}
-		}  
 		else
 		{
 			eDebug("Wrong HW, this image can be only run on Miraclbox Premium and WWIO Series");
